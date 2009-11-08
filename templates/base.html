@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+{% block header %}
+
+<head>
+
+<title>very small ventures - Home</title>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="Erwin Aligam - styleshout.com" />
+<meta name="description" content="Site Description Here" />
+<meta name="keywords" content="keywords, here" />
+<meta name="robots" content="index, follow, noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+<style type="text/css">{% include "css/screen.css" %}</style>
+<style type="text/css">{% include "css/GrungeEra.css" %}</style>
+
+
+</head>
+<body>
+
+<div id="wrap">
+
+	<a name="top"></a>
+    
+<!-- header -->
+
+	<div id="header">					
+		
+		<h1 id="logo-text"><a href="/home" title="">very small ventures</a></h1>		
+		<p id="intro">one idea, one iteration at a time.</p>				
+		
+		<!-- navigation -->
+		<div  id="nav">
+			<ul>
+				<li id="current"><a href="/home">Home</a></li>
+				<li><a href="/ventures">Ventures</a></li>
+				<li><a href="/about">About</a></li>	
+                <li><a href="/contact">Contact</a></li>		
+			</ul>		
+		</div>				
+	
+	</div>	
+    
+{% endblock %}
+
+<!-- header ends -->
+	
+<!-- content starts -->
+    
+<div id="content-outer" class="clear">
+<div id="content-wrap" >	
+
+{% block content %}
+               
+               
+                						
+{% endblock %}	
+
+<!-- content ends -->	
+</div>
+</div>
+ 
+	
+	
+	<div id="footer-outer" class="clear"><div id="footer-wrap"></div></div>	
+    <div id="footer-bottom">			
+        <p>	
+			&copy; 2009 very small ventures									
+		</p>
+        
+    </div>
+	</div>			
+
+<!-- wrap ends -->
+</div>
+</body>
+</html>

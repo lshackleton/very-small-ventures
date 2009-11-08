@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+<head>
+
+<title>Very Small Ventures - Contact</title>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="Erwin Aligam - styleshout.com" />
+<meta name="description" content="Site Description Here" />
+<meta name="keywords" content="keywords, here" />
+<meta name="robots" content="index, follow, noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+<style type="text/css">{% include "css/screen.css" %}</style>
+<style type="text/css">{% include "css/GrungeEra.css" %}</style>
+
+
+</head>
+<body>
+
+<div id="wrap">
+
+	<a name="top"></a>
+    
+<!-- header -->
+
+	<div id="header">					
+		
+		<h1 id="logo-text"><a href="/home" title="">very small ventures</a></h1>		
+		<p id="intro">one idea, one iteration at a time.</p>				
+		
+		<!-- navigation -->
+		<div  id="nav">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/ventures">Ventures</a></li>
+				<li><a href="/about">About</a></li>	
+                <li id="current"><a href="/contact">Contact</a></li>		
+			</ul>		
+		</div>				
+	
+	</div>	
+    
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+
+		<a name="TemplateInfo"></a>
+			
+			<h3>come hang out</h3>					
+			
+			<p>
+			Tell us you hate or love our ideas, either way we'd like to hear from you.  Thanks for checking out the site and the projects.  You can contact us using the form below. 				
+            
+            	<form action="index.html" method="post" id="commentform">		
+	
+					<label for="name">Name</label><br />
+					<input id="name" name="name" value="Your Name" type="text" tabindex="1" />
+				</p>
+			
+				<p>
+					<label for="email">Email Address</label><br />
+					<input id="email" name="email" value="Your Email" type="text" tabindex="2" />
+				</p>
+					
+				<p>
+					<label for="message">Your Message</label><br />
+					<textarea id="message" name="message" rows="10" cols="20" tabindex="4"></textarea>
+				</p>	
+			
+				<p class="no-border">
+					<input class="button" type="submit" value="Submit" tabindex="5" />         		
+				</p>
+					
+			</form>	
+
+</div>
+
+{% endblock %}
+		
+	

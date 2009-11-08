@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+<head>
+
+<title>Very Small Ventures - Ventures</title>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="Erwin Aligam - styleshout.com" />
+<meta name="description" content="Site Description Here" />
+<meta name="keywords" content="keywords, here" />
+<meta name="robots" content="index, follow, noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+<style type="text/css">{% include "css/screen.css" %}</style>
+<style type="text/css">{% include "css/GrungeEra.css" %}</style>
+
+
+</head>
+<body>
+
+<div id="wrap">
+
+	<a name="top"></a>
+    
+<!-- header -->
+
+	<div id="header">					
+		
+		<h1 id="logo-text"><a href="/home" title="">very small ventures</a></h1>		
+		<p id="intro">one idea, one iteration at a time.</p>				
+		
+		<!-- navigation -->
+		<div  id="nav">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li id="current"><a href="/ventures">Ventures</a></li>
+				<li><a href="/about">About</a></li>	
+                <li><a href="/contact">Contact</a></li>		
+			</ul>		
+		</div>				
+	
+	</div>	
+    
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+
+		<a name="TemplateInfo"></a>
+        
+        
+        	<h3>stuff we built</h3>					
+			<p class="thumbs">
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+                <a href="index.html"><img src="static/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			</p>
+						
+			<p>
+			Above you will find a handful of our projects.  As you can see, we use free and open sources programs like Google App Engine and Django to create efficient solutions to problems that we find.  We like creating simple apps that solve interesting problems.
+            
+            <br />
+            <br />
+            
+            We also like collaborating with people smarter than us.  If you want to check out the code or have ideas we could work on, feel free to <a href="/contact">contact us</a>. 				
+	
+            				
+			</p>
+
+</div>
+
+{% endblock %}
+		
+	
