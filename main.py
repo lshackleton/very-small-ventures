@@ -176,9 +176,9 @@ Email address: %s
 message: %s
 
 
- """ % (name, email, message)
+ """ % (name, name, email, message)
                   )
-    self.redirect('/')
+    self.redirect('/index')
 
 # Map URLs to our RequestHandler classes above
 _VERYSMALLVENTURES_URLS = [
