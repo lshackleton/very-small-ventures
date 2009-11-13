@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-aptauction
+VSV site
 
 We use the webapp.py WSGI framework to handle CGI requests, using the
 wsgiref module to wrap the webapp.py WSGI application in a CGI-compatible
@@ -13,7 +13,7 @@ Django template filter library in templatefilters.py for use in dilbertindex
 templates.
 """
 
-__author__ = '(Bill Ferrell)'
+__author__ = 'Lane Shackelton and Bill Ferrell'
 
 import cgi
 import datetime
@@ -52,7 +52,7 @@ logging.getLogger().setLevel(logging.INFO)
 template.register_template_library('templatefilters')
 
 # Set to true to see stack traces and template debugging information
-_DEBUG = True
+_DEBUG = False
 
 
 class BaseRequestHandler(webapp.RequestHandler):
@@ -148,6 +148,38 @@ class ContactPageHandler(BaseRequestHandler):
     self.generate('contact.html', {
     })
 
+
+class ContactPageActionHandler(BaseRequestHandler):
+  """
+  Processes a contact form submission.
+
+  """
+  def post(self):
+
+    name = self.request.get('name')
+    email = self.request.get('email')
+    message = self.request.get('message')
+
+    mail.send_mail(sender="wferrell@gmail.com",
+                  to="wferrell@gmail.com",
+                  bcc="laneshackleton@gmail.com",
+                  subject="VSV Contact Message",
+                  body="""
+Lane, Bill, 
+
+We have a message from %s.
+
+All the details:
+
+Name: %s
+Email address: %s
+message: %s
+
+
+ """ % (name, email, message)
+                  )
+    self.redirect('/')
+
 # Map URLs to our RequestHandler classes above
 _VERYSMALLVENTURES_URLS = [
 # after each URL map we list the html template that is displayed
@@ -158,6 +190,7 @@ _VERYSMALLVENTURES_URLS = [
    ('/about', AboutPageHandler), #about.html
    ('/ventures', VenturesPageHandler), #ventures.html
    ('/contact', ContactPageHandler), #contact.html
+   ('/contact.do', ContactPageActionHandler), # emails lane and bill
    ('/.*$', HomePageHandler), #home.html
 ]
 
